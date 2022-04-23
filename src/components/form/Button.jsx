@@ -9,10 +9,10 @@ const Container = styled.button`
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin-right: 4px;
+  margin-right: 0.25rem;
   cursor: pointer;
 
-  font-size: ${(props) => (props.small ? '11px' : '16px')};
+  font-size: ${(props) => (props.small ? '.6rem' : '1rem')};
   height: ${(props) => (props.small ? '1.2rem' : '3rem')};
   width: ${(props) => (props.small ? '3.2rem' : '5rem')};
 `;

@@ -3,18 +3,19 @@
   justify-content: center;
   align-items: flex-start;
 }
+
 .card {
   background-color: lightgrey;
   width: 500px;
   height: 650px;
-  border: 15px solid #4caf50;
-  padding: 10px;
-  margin: 20px;
+  border: 1rem solid #4caf50;
+  padding: 0.5rem;
+  margin: 1rem;
 }
 
 @media (max-width: 375px) {
   .card {
     height: 550px;
-    margin: 10px;
+    margin: 0.5rem;
   }
 }
