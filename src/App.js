@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import AppRouter from './routes/AppRouter';
+import { TriviaGameContext } from './context/TriviaGameContext';
+import TriviaGameManager from './context/TriviaGameManager';
 import './App.css';
 
-function App() {
+export default function App() {
+  const triviaGameManager = new TriviaGameManager('easy');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TriviaGameContext.Provider value={triviaGameManager}>
+      <div className={'page-container'}>
+        <div className={'card'}>
+          <AppRouter />
+        </div>
+      </div>
+    </TriviaGameContext.Provider>
   );
 }
-
-export default App;
